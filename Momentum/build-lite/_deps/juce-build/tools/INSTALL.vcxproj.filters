@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\new\Desktop\momentum\Momentum\build-lite\_deps\juce-build\tools\CMakeFiles\97763dc55778325dfcd69fa948944e3f\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0C9B2ED6-3811-358B-85DE-E4682DE8E6D5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

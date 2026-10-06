@@ -1,0 +1,10 @@
+^C:\USERS\NEW\DESKTOP\MOMENTUM\MOMENTUM\BUILD-LITE\CMAKEFILES\1DC3FEF076D3CC63A85813A9CC16E5EB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/new/Desktop/momentum/Momentum -BC:/Users/new/Desktop/momentum/Momentum/build-lite --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/new/Desktop/momentum/Momentum/build-lite/Momentum.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

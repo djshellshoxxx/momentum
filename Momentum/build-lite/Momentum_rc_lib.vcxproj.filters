@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\new\Desktop\momentum\Momentum\build-lite\CMakeFiles\cb2b461202fb418b89aacd870a342220\Momentum_resources.rc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\new\Desktop\momentum\Momentum\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\new\Desktop\momentum\Momentum\build-lite\Momentum_artefacts\JuceLibraryCode\Momentum_resources.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{211A0B82-0ECA-360F-8F9D-C82F3B0161BE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{44351E85-1EC5-3676-9CD2-304BC1BBFEFA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

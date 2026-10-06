@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\new\Desktop\momentum\Momentum\build\_deps\juce-src\modules\juce_audio_plugin_client\VST3\juce_VST3ManifestHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\new\Desktop\momentum\Momentum\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{44351E85-1EC5-3676-9CD2-304BC1BBFEFA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

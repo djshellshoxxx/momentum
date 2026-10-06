@@ -1,0 +1,10 @@
+^C:\USERS\NEW\DESKTOP\MOMENTUM\MOMENTUM\BUILD-LITE\_DEPS\JUCE-BUILD\TOOLS\CMAKEFILES\97763DC55778325DFCD69FA948944E3F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/new/Desktop/momentum/Momentum/build/_deps/juce-src -BC:/Users/new/Desktop/momentum/Momentum/build-lite/_deps/juce-build/tools --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/new/Desktop/momentum/Momentum/build-lite/_deps/juce-build/tools/JUCE.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
