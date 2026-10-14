@@ -56,6 +56,21 @@ FetchContent_Declare(JUCE
 
 FetchContent_MakeAvailable(JUCE)
 
+# CLAP support comes from free-audio/clap-juce-extensions, a thin wrapper over the same
+# JUCE processor. On by default; -DMOMENTUM_BUILD_CLAP=OFF skips it.
+option(MOMENTUM_BUILD_CLAP "Also build a CLAP plug-in" ON)
+
+if(MOMENTUM_BUILD_CLAP)
+    FetchContent_Declare(clap-juce-extensions
+        GIT_REPOSITORY  https://github.com/free-audio/clap-juce-extensions.git
+        GIT_TAG         main
+        GIT_SHALLOW     TRUE)
+    FetchContent_MakeAvailable(clap-juce-extensions)
+endif()
+
+# Copying into the system plug-in folders is only wanted on a developer's own machine.
+option(MOMENTUM_COPY_AFTER_BUILD "Install built plug-ins into the system plug-in folders" ON)
+
 #==============================================================================
 # Plugin target
 #==============================================================================
@@ -76,9 +91,15 @@ juce_add_plugin(Momentum
     NEEDS_MIDI_OUTPUT           FALSE
     IS_MIDI_EFFECT              FALSE
     EDITOR_WANTS_KEYBOARD_FOCUS FALSE
-    COPY_PLUGIN_AFTER_BUILD     TRUE
+    COPY_PLUGIN_AFTER_BUILD     ${MOMENTUM_COPY_AFTER_BUILD}
     ICON_BIG                    "${CMAKE_CURRENT_SOURCE_DIR}/Resources/MomentumIcon.png"
     ICON_SMALL                  "${CMAKE_CURRENT_SOURCE_DIR}/Resources/MomentumIcon.png")
+
+if(MOMENTUM_BUILD_CLAP)
+    clap_juce_extensions_plugin(TARGET Momentum
+        CLAP_ID         "${MOMENTUM_BUNDLE_ID}"
+        CLAP_FEATURES   audio-effect compressor)
+endif()
 
 target_sources(Momentum PRIVATE
     Source/PluginProcessor.cpp

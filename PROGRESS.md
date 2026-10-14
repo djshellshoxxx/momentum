@@ -27,6 +27,21 @@ Artefacts:
 
 ---
 
+## Beta build 1.0.0-beta (2026-10-08)
+
+- Added CLAP (clap-juce-extensions) and Linux support in `CMakeLists.txt`; options
+  `MOMENTUM_BUILD_CLAP` and `MOMENTUM_COPY_AFTER_BUILD`.
+- Built VST3 + CLAP + Standalone for Linux x64 (GCC 13) and Windows x64 (MinGW-w64 cross, static).
+- Audit: no functional bugs found in the DSP, MIDI learn or state code. Only style warnings
+  (`-Wfloat-equal`, `-Wshadow`).
+- Tested: Linux standalone runs 8 s under Xvfb without crashing; CLAP/VST3 entry points verified.
+- NOT tested: Windows binaries have not been run (no Windows/Wine here); no DAW load test.
+  The Windows VST3 has no `moduleinfo.json` (cross-build helper). Official release should
+  be rebuilt with MSVC.
+- Artefacts: `Momentum/dist/`.
+
+---
+
 ## Environment (verified 2026-09-15)
 
 | Tool | Status |

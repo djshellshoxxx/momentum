@@ -6,3 +6,6 @@
 *.tlog
 *.lastbuildstate
 *.recipe
+
+build-linux/
+build-win/
